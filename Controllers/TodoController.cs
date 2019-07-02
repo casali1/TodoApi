@@ -46,7 +46,7 @@ namespace TodoApi.Controllers
             return todoItem;
         }
 
-        // POST: api/Todo
+        // POST: api/Todo  - CREATE method
         [HttpPost]
         public async Task<ActionResult<TodoItem>> PostTodoItem(TodoItem item)
         {
@@ -56,7 +56,7 @@ namespace TodoApi.Controllers
             return CreatedAtAction(nameof(GetTodoItem), new { id = item.Id }, item);
         }
 
-        // PUT: api/Todo/5
+        // PUT: api/Todo/5 - EDIT method
         [HttpPut("{id}")]
         public async Task<IActionResult> PutTodoItem(long id, TodoItem item)
         {
